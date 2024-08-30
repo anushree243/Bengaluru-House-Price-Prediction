@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>House Price Prediction</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/style.css') }}"> <!-- You can create a CSS file for styling -->
+    <script type="text/javascript" src="{{ url_for('static',filename='js/script.js') }}">
+    </script> 
+</head>
+<body style="background-image: url('static/img/houseImage.jpeg');">
+    <header>
+        <h1>House Price Prediction</h1>
+    </header>
+    <main>
+        <form id="predictionForm" method="post">
+            <label for="bhk">Number of Bedrooms:</label>
+            <!-- <input type="number" id="bhk" name="bhk" required> -->
+            <select id="bhk" name="bhk" required="1">
+                {% for bhk in bhks %}
+                    <option value="{{ bhk }}">{{ bhk }}</option>
+                {% endfor %}
+            </select>
+            
+            <label for="bath">Number of Bathrooms:</label>
+            <!-- <input type="number" id="bath" name="bath" required> -->
+            <select id="bath" name="bath" required="1">
+                {% for bath in baths %}
+                    <option value="{{ bath }}">{{ bath }}</option>
+                {% endfor %}
+            </select>
+            
+            <label for="total_sqft">Square Footage:</label>
+            <!-- <input type="number" id="total_sqft" name="total_sqft" required> -->
+            <select id="total_sqft" name="total_sqft" required="1">
+                {% for total_sqft in total_sqfts %}
+                    <option value="{{ total_sqft }}">{{ total_sqft }}</option>
+                {% endfor %}
+            </select>
+            
+            <label for="location">Location:</label>
+            <!-- <input type="text" id="location" name="location" required> -->
+            <select id="location" name="location" required="1" style="margin-bottom: 0.5rem;">
+                {% for location in locations %}
+                    <option value="{{ location }}">{{ location }}</option>
+                {% endfor %}
+            </select>
+        
+            <button type="submit" onclick="send_data()">
+                Predict Price
+            </button>
+        </form>
+        
+        <div id="predictionResult" style="text-align: center;">
+            <!-- Display the prediction result here -->
+        </div>
+    </main>
+    <footer>
+        Thankyou for visiting our Page...
+    </footer>
+
+</body>
+</html>

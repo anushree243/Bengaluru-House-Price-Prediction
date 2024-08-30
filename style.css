@@ -1,0 +1,80 @@
+body {
+    background: linear-gradient(to bottom, #f4f4f4, #e0e0e0);
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+    font-size: 1.5rem;
+}
+
+form {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 2rem;
+    background-color: #fff;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+}
+
+label {
+    font-weight: bold;
+    color: #333;
+}
+
+input[type="number"],
+input[type="text"], select {
+    width: 103%;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    transition: border-color 0.3s;
+    margin-top: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+input[type="number"]:focus,
+input[type="text"]:focus,select {
+    border-color: #1f1d1d;
+}
+
+button {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 0.7rem 1.5rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 0.4rem;
+}
+
+button:hover {
+    background-color: #535050;
+}
+
+#predictionResult {
+    margin-top: 1rem;
+    margin-bottom: 0.2rem;
+    font-weight: bold;
+    padding: 1.1rem;
+    background-color: #f7f7f7;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    height: 1rem;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+    font-size: 1.5rem;
+}
+
+main {
+    padding-top: 1.5rem;
+}
